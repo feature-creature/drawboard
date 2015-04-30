@@ -1,0 +1,6 @@
+{
+  "name": "Demalab Drawboard",
+  "description": "Simple socket.io drawing app with p5.js",
+  "repository": "",
+  "keywords": ["node", "socket.io", "p5js"]
+}

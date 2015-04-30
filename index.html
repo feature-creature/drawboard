@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <script language="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	  <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
+	  <script language="javascript" src="p5.js"></script>
+	  <script language="javascript" src="p5.dom.js"></script>
+	  <script language="javascript" src="p0.js"></script>
+	  <title>demalab</title>
+	</head>
+	<body>
+		<div id="orange"></div>
+		<div id="title">dema lab</div>
+		<div id="search">the rest is in the api</div>
+		<div id="lisence">MIT License &#169; 2015</div>
+	</body>
+</html>
+
+<style type="text/css">
+	body {
+		font-family: helveticaneue;
+		/*font-family: monospace;*/
+		text-align: center;
+		cursor: default;
+		padding: 0;
+		margin: 0;
+	}	
+	#orange {
+		background-color: lightgray;
+		position: fixed;
+		height: 10px;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+	#search {
+ 		background-color: rgba(205,205,205,0.8);
+		text-transform: uppercase;
+ 		letter-spacing: 1px;
+ 		border-radius: 3px;
+		position: absolute;
+		margin: 10px 20px;
+ 		padding: 5px 15px;
+ 		text-align: left;
+		font-size: 10px;
+ 		color: white;
+		bottom: 0;
+		left: 0;
+	}
+	#search:hover {
+		color: gray;
+	}
+	#title {
+		background-color: transparent;
+		text-transform: uppercase;
+ 		letter-spacing: 8px;
+ 		position: absolute;
+ 		text-align: left;
+ 		font-size: 21px;
+ 		opacity: 0.65;
+ 		bottom: 25px;
+ 		margin: 10px;
+  	color: gray;
+ 		left: 12px;
+	}
+	#lisence {
+		background-color: transparent;
+ 		position: absolute;
+ 		margin: 5px 20px;
+ 		text-align: right;
+ 		font-size: 13px;
+ 		opacity: 0.65;
+ 		padding: 5px;
+ 		color: gray;
+ 		bottom: 0;
+ 		right: 0;
+	}
+	#lisence:hover {
+		opacity: 1;
+	}
+
+</style>
+<script>
+	function windowResized() {
+ 		resizeCanvas(windowWidth, windowHeight);
+	}
+	windowResized();
+<script>
+
