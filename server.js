@@ -35,10 +35,11 @@ var handleRequest = function (request, response) {
 };
 
 var server = http.createServer(handleRequest);
-server.listen(8080);
+var port = process.env.PORT || 7000;
+server.listen(port);
 var io = require('socket.io').listen(server);
 
-console.log('server started on port 8080');
+console.log('server started on port ' + port + ".");
 
 io.sockets.on(
 	'connection',
