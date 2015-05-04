@@ -4,7 +4,7 @@ var _strokeCol = 0;
 var _strokeChange = -1;
 
 function setup(){
-  socket = io.connect('http://localhost');
+  socket = io.connect('http://fathomless-temple-7308.herokuapp.com/');
   createCanvas(windowWidth,windowHeight);
   background(255);
   frameRate(60);
