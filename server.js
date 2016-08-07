@@ -44,17 +44,14 @@ console.log('server started on port ' + port + ".");
 io.sockets.on(
 	'connection',
 	function (socket) {
-	  console.log("We have a new client: " + socket.id);
-	  socket.on('disconnect', function() {
-	    console.log("Client has disconnected");
-	  });
-		socket.on(
-			'mouse',
-			function(data){
-				console.log('received mouse data: ' + data.x + "," + data.y + "," + data.z + ".");
-				socket.broadcast.emit('mouse',data);
-			}
-		)
+		console.log("New client: " + socket.id);
+		socket.on('disconnect', function() {
+			console.log("Client has disconnected");
+		});
+		socket.on('mouse',function(data){
+			console.log('received mouse data: ' + data.x + "," + data.y + "," + data.z + ".");
+			socket.broadcast.emit('mouse',data);
+		})
 	}
 );
 
