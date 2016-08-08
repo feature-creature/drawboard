@@ -43,7 +43,9 @@
     var name = new Date();
     saveCanvas(canvas,"drawing name",'png');
   }
-  
+  window.onbeforeunload = function (){
+    return 'Leaving the page will erase all work.'
+  }
   $(document).ready(function(){
     colorRange = document.getElementById('color-range');
     colorText = document.getElementById('color-text');
