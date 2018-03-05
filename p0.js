@@ -47,14 +47,20 @@
     return 'Leaving the page will erase all work.'
   }
   $(document).ready(function(){
+    
+    // some of these elements are missing or not implemented live
     colorRange = document.getElementById('color-range');
     colorText = document.getElementById('color-text');
     grid = document.getElementById('grid');
   
     document.onkeyup = function(e){
+      
       var kC = e.keyCode;
+      // up|down|left|right
       if (kC > 36 && kC < 41) colorRange.focus();
+      // enter
       if(kC == "13") saveNewDrawing();
+      // spacebar
       if(kC == "32") grid.style.display = grid.style.display == "none" ? "block" : "none";
     }
   })
